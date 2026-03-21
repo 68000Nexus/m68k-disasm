@@ -19,8 +19,8 @@ process and maybe more.
 
 ## Build
 
-To build this project, you will need CMake and some modern C++ compiler like GCC
-or Clang. Here is how to build it using CMake:
+To build this project, you will need CMake, GNU Make and some modern C++
+compiler like GCC or Clang. Here is how to build it using CMake:
 
 ```
 cmake -B cmake-build -S .
@@ -100,7 +100,7 @@ trace table.
 Or better with labeled locations analysis and some fancy raw comments:
 
 ```
-./cmake-build/m68k-disasm -frdc -fxrefs-to -fxrefs-from -flabels -fabs-labels -frel-labels -fexport-labels -fexport-functions -fimm-hex -follow-jumps -fwalk -t pc-trace.txt -o disasm.S rom.bin
+./cmake-build/m68k-disasm -frdc -fxrefs-to -fxrefs-from -flabels -fabs-labels -frel-labels -fexport-labels -fexport-functions -fimm-hex -ffollow-jumps -fwalk -t pc-trace.txt -o disasm.S rom.bin
 ```
 
 It will produce `disasm.S` which you can modify and assemble as shown in
